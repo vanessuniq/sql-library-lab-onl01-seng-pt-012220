@@ -29,7 +29,7 @@ end
 
 def select_series_title_with_most_human_characters
   "SELECT series.title FROM series 
-  "
+  WHERE books.series_id = series.id and books.id = character_books.book_id and character_books.character_id = characters.id and characters.species = 'Human'"
 end
 
 def select_character_names_and_number_of_books_they_are_in

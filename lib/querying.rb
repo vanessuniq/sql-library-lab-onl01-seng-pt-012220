@@ -9,13 +9,15 @@ def select_name_and_motto_of_char_with_longest_motto
   "SELECT name, motto 
   FROM characters
   ORDER BY LENGTH(motto) DESC
-  LIMMIT 1;"
+  LIMIT 1;"
 end
 
 
 def select_value_and_count_of_most_prolific_species
   "SELECT DISTINCT(species), COUNT(species)
   FROM characters
+  ORDER BY COUNT(species)
+  LIMIT 
   "
 end
 
